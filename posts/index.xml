@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Flutter Is Fun</title>
-    <link>https://www.flutterisfun.com/</link>
-    <description>Recent content on Flutter Is Fun</description>
+    <title>Posts on Flutter Is Fun</title>
+    <link>https://www.flutterisfun.com/posts/</link>
+    <description>Recent content in Posts on Flutter Is Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 08:21:17 -0700</lastBuildDate>
     
-	<atom:link href="https://www.flutterisfun.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.flutterisfun.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -55,24 +55,6 @@ I&amp;rsquo;ve always enjoyed making applications and websites, but I never real
       
       <guid>https://www.flutterisfun.com/posts/emoji-support/</guid>
       <description>Emoji can be enabled in a Hugo project in a number of ways.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.flutterisfun.com/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.flutterisfun.com/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://www.flutterisfun.com/about/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.flutterisfun.com/about/</guid>
-      <description>Flutter Is Fun is a newsletter for Flutter and Dart developers.</description>
     </item>
     
   </channel>
