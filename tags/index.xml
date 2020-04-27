@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Flutter Is Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2020 08:21:17 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 08:21:17 -0700</lastBuildDate>
     
 	<atom:link href="https://www.flutterisfun.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dart</title>
+      <link>https://www.flutterisfun.com/tags/dart/</link>
+      <pubDate>Mon, 27 Apr 2020 08:21:17 -0700</pubDate>
+      
+      <guid>https://www.flutterisfun.com/tags/dart/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>flutter</title>

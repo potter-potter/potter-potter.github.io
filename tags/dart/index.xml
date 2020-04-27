@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Flutter Is Fun</title>
-    <link>https://www.flutterisfun.com/posts/</link>
-    <description>Recent content in Posts on Flutter Is Fun</description>
+    <title>dart on Flutter Is Fun</title>
+    <link>https://www.flutterisfun.com/tags/dart/</link>
+    <description>Recent content in dart on Flutter Is Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Apr 2020 08:21:17 -0700</lastBuildDate>
     
-	<atom:link href="https://www.flutterisfun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.flutterisfun.com/tags/dart/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://www.flutterisfun.com/posts/zip_and_reduce/</guid>
       <description>As a Python developer who is also writing Dart, there are a few things I was missing when developing in Dart.</description>
-    </item>
-    
-    <item>
-      <title>Introduction</title>
-      <link>https://www.flutterisfun.com/posts/introduction/</link>
-      <pubDate>Sun, 26 Apr 2020 08:21:17 -0700</pubDate>
-      
-      <guid>https://www.flutterisfun.com/posts/introduction/</guid>
-      <description>Why am I starting a newsletter for Flutter?
-I&amp;rsquo;ve always enjoyed making applications and websites, but I never really liked the front end part.</description>
     </item>
     
   </channel>

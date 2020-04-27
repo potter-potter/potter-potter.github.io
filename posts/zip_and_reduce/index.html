@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title> | Flutter Is Fun</title>
+    <title>Zip and Reduce in Dart | Flutter Is Fun</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -144,39 +144,87 @@
         <div id="content" class="content-container">
         
 
-  <h1>
-    Archives
-  </h1>
-  <div>
-     
-      
-      
-          <h3>2020</h3> 
+<h1 class="post-title">Zip and Reduce in Dart</h1>
+    
+    <time>April 27, 2020</time>
+    
+    <div>
+        <p>
+        <p>As a Python developer who is also writing Dart, there are a few things I was missing when developing in Dart. One of those was the mighty zip function. The zip function in Python is really handy for combining two or more lists into a list of lists. (actually python returns an iterator of tuples, but it serves the same purpose) This zipping operation is pretty common in data science when cleaning up data.</p>
+<p>After a little digging, I found the zip function in Dart. It&rsquo;s in a package called Quiver. I&rsquo;m not sure if it is a core package written by Google or not, but it has a couple handy utility libraries. Zip is in the iterables library, well, because it works on iterables.
+At first I had some trouble installing the library. But once I found the Quiver page on pub.dev, it was really clear how to install it.</p>
+<p>Add this to your pubspec.yaml file.</p>
+<pre><code>dependencies:
+  quiver: ^2.1.3
+</code></pre><p>Run this in the command line to get the package.</p>
+<pre><code>pub get
+</code></pre><p>At the top of your dart file add:</p>
+<pre><code>import 'package:quiver/iterables.dart';
+</code></pre><h3 id="zipping-with-zip">Zipping With Zip()</h3>
+<p>Let&rsquo;s start with two lists of integers:</p>
+<pre><code>var int_list_1 = [1, 2, 3, 4];
+var int_list_2 = [5, 6, 7, 8, 9];
+</code></pre><p>Python&rsquo;s:</p>
+<pre><code>zipped = zip(int_list1, int_list_2)
+</code></pre><p>In Dart you would use the zip() function like this:</p>
+<pre><code>var zipped = zip([int_list_1, int_list_2]).toList();
+</code></pre><p>Returns <code>[[1, 5], [2, 6], [3, 7]]</code></p>
+<p>Notice that I added the <code>toList()</code> method at the end. This gives us a list of lists, instead of the iterable of lists that it would normally return. Also take note that the integer <code>9</code> in <code>int_list_2</code> didn&rsquo;t get zipped. That&rsquo;s because it bases the zip on the shortest list only.</p>
+<h3 id="the-reduce-method">The Reduce() Method</h3>
+<p>Reduce is another method which is often mentioned along with <code>map()</code> and <code>where()</code> (which I covered here). <code>Reduce()</code> can be used to sum up a list of numbers. I don&rsquo;t find myself using it much in Python, but it does come in handy every once in a while. It takes the first element in a list, does something to it, keeps the value and then does the same thing with the next element. And it keeps on going until it reaches the end of the list.</p>
+<p>Here&rsquo;s that list again:</p>
+<pre><code>var int_list_1 = [1, 2, 3, 4];
+</code></pre><p>Python&rsquo;s:</p>
+<pre><code>reduced = functools.reduce(lambda value,element : value+element, int_list_1)
+</code></pre><p>In dart the reduce() looks like this:</p>
+<pre><code>var reduced = int_list_1.reduce((value, element) =&gt; value + element);
+</code></pre><p>Returns <code>10</code></p>
+<p>In this case <code>10</code> is sum of the all the integers in the list.</p>
+<h3 id="fun-with-dart-and-flutter">Fun with Dart (and Flutter)</h3>
+<p>I&rsquo;ve found that being comfortable with Lists, Maps and other iterables to be super import in developing applications and pipelines. And they can be fun once you get a good grasp of them.</p>
+<p>If you like Flutter (and Dart), and I know you do, subscribe to my newsletter FlutterIsFun and follow me on twitta’</p>
+<p>SUBSCRIBE TO NEWSLETTER</p>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:400px;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://flutterisfun.us2.list-manage.com/subscribe/post?u=c2487cc89f1b430d7b4a7c99f&amp;id=aa9c02f02b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+<!--	<h2>Subscribe</h2> -->
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c2487cc89f1b430d7b4a7c99f_aa9c02f02b" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
 
-          <ul class="archives-list"> 
-            
-              
-             
-                  <li class="archives-list-item">
-                    <span class="archives-list-item-date">Apr 27</span>
-                    <span>
-                      <a href="/posts/zip_and_reduce/">Zip and Reduce in Dart</a>
-                    </span>
-                  </li>
-              
-             
-                  <li class="archives-list-item">
-                    <span class="archives-list-item-date">Apr 26</span>
-                    <span>
-                      <a href="/posts/introduction/">Introduction</a>
-                    </span>
-                  </li>
-              
-          </ul>
-      
-  </div>
+        </p>
+    </div>
+    
 
-  <div class="page-footer"></div>
+    
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/dart">#dart</a>
+        
+      
+    </div>
 
 
         
