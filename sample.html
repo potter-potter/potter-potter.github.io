@@ -66,7 +66,8 @@
 							JSON Returned From Api
 						</h2>
 						<p>
-							Data returned from the Api will look like the below. If necessary we can provide a Swagger document.
+							Data returned from the Api will look like the below.</br> 
+							Note that this sample includes the Income <b>and</b> the Demographics Add-On data.
 						</p>
 						<pre id="json"></pre>
 					</section>
@@ -134,43 +135,86 @@
 	
 	<script>
 		var data = {
-    "income_data": {
-        "State": "AZ",
-        "Zipcode": "85003",        
-        "Households": 3912,
-        "MeanIncome": 75886,
-        "MedianIncome": 42936,
-        "PerCapitaIncome": 37766,
-        "PercentIncomeOver200K": 7.5,
-        "IncomeAbove200k": 293,
-        "Income150kTo200k": 226,
-        "Income100kTo150k": 487,
-        "Income75kTo100k": 298,
-        "Income50kTo75k": 470,
-        "Income25kTo50k": 939,        
-        "IncomeUnder25Years": 35594,
-        "IncomeLessThan25k": 1199,
-        "Income25To44Years": 47463,
-        "Income45To64Years": 40776,
-        "Income65YearsAndOver": 33047
-    },
-    "demographics_data": {
-        "State": "AZ",
-        "Zipcode": "85003",        
-        "PopulationDensity": 4548.35,
-        "Female0yTo9y": 313,
-        "Female10yTo19y": 276,
-        "Female20yTo29y": 578,
-        "Female30yTo39y": 619,
-        "Female40yTo49y": 462,
-        "Female50yTo59y": 609,
-        "Female10yo19y": 276,
-        "Female20yo29y": 578,
-        "Female30y39y": 619,
-        "Female40yo49y": 462
+		"zipcode": "85003",
+    
+        "income_data": {
+            "State": "AZ",
+            "Zipcode": "85003",
+            "Households": 3912,
+            "MeanIncome": 75886,
+            "MeanIncomeError": 7383,
+            "MedianHouseholdIncome": 42936,
+            "MedianHouseholdIncomeError": 5308,
+            "PerCapitaIncome": 37766,
+            "PerCapitaIncomeError": 2931,
+            "PercentIncomeOver200K": 7.5,
+            "PercentIncomeOver200KError": 2.2,
+            "IncomeLessThan25k": 1199,
+            "Income25kTo50k": 939,
+            "Income50kTo75k": 470,
+            "Income75kTo100k": 298,
+            "Income100kTo150k": 487,
+            "Income150kTo200k": 226,
+            "IncomeUnder25Years": 35594,
+            "IncomeUnder25YearsError": 20514,
+            "Income25To44Years": 47463,
+            "Income25To44YearsError": 12673,
+            "Income45To64Years": 40776,
+            "Income45To64YearsError": 11082,
+            "Income65YearsAndOver": 33047,
+            "Income65YearsAndOverError": 13887,
+			"IncomeAbove200k": 293,
+			"IncomeUnder25YearsOver100k": 122,
+        },
+		"demographic_data": {
+            "Population": 8419,
+            "MedianAge": 39,
+            "PopulationDensity": 14.4,
+            "HousingUnits": 4849,
+            "MedianValueOwnerOccupiedUnits": 343100,
+            "Population25YearsAndOlder": 6750,
+            "Population25YearsNoDiploma": 0,
+            "Population25YearsHighSchoolDiploma": 0,
+            "Population25YearsSomeCollege": 0,
+            "Population25YearsBachelorsDegree": 0,
+            "Population25YearsGraduateDegree": 0,
+            "Female0To9Years": 313,
+            "Female10To19Years": 276,
+            "Female20To29Years": 578,
+            "Female30To39Years": 619,
+            "Female40To49Years": 462,
+            "Female50To59Years": 609,
+            "Female60To69Years": 421,
+            "Female70YearsAndOlder": 356,
+            "Male0YearsTo9Years": 227,
+            "Male10YearsTo19Years": 281,
+            "Male20YearsTo29Years": 893,
+            "Male30YearsTo39Years": 1070,
+            "Male40YearsTo49Years": 826,
+            "Male50YearsTo59Years": 696,
+            "Male60YearsTo69Years": 550,
+            "Male70YearsAndOlder": 242,
+            "CivilianLaborForce16Years": 0,
+            "UnemploymentRate": 2,
+            "Families": 1386,
+            "FamilyHouseholds": 1386,
+            "SingleParentFamilies": 462,
+            "SingleParentFamiliesWithChildrenUnder18Years": 209,
+            "MarriedCoupleFamilies": 924,
+            "MarriedCoupleWithChildrenUnder18Years": 340,
+            "FamilyPoverty": 0,
+            "NonFamilies": 2526,
+            "Asian": 132,
+            "Black": 792,
+            "Hispanic": 2906,
+            "Islander": 0,
+            "Native": 236,
+            "White": 4302,
+            "OtherRace": 428,
+            "TwoRaces": 253,
+        }
 
 
-    }
 }
 
 
